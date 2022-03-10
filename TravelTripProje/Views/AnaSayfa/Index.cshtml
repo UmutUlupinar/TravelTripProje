@@ -1,0 +1,149 @@
+﻿@using TravelTripProje.Models.Classes
+@model List<Blog>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_TestLayout.cshtml";
+}
+
+<!DOCTYPE HTML>
+<html>
+<body>
+
+    <div class="header-banner">
+        <div class="wrap">
+            <div class="banner">
+                <div class="indent">
+                    <h2 class="indent-left margin-bot">Plan the future memories!!</h2>
+                    <div class="banner-left">
+                        <div class="con-text">
+                            <div class="grid1-img">
+                                <img src="~/web/images/glass.png" alt="">
+                            </div>
+                            <div class="grid1-desc">
+                                <p>Restaurants</p>
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                        <div class="con-text">
+                            <div class="grid1-img">
+                                <img src="~/web/images/flight.png" alt="">
+                            </div>
+                            <div class="grid1-desc">
+                                <p>Flights</p>
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                        <div class="con-text">
+                            <div class="grid1-img">
+                                <img src="~/web/images/group.png" alt="">
+                            </div>
+                            <div class="grid1-desc">
+                                <p>Things to do</p>
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                        <div class="con-text">
+                            <div class="grid1-img">
+                                <img src="~/web/images/key.png" alt="">
+                            </div>
+                            <div class="grid1-desc">
+                                <p>Vacation Rents</p>
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="header_bottom_right_images">
+
+                        <div class="slider" style="width:650px;height:345px;">
+                            <ul class="rslides" id="slider1">
+                                @foreach (var x in Model)
+                                {
+                                <li> <img src="@x.BlogImage" height="600" width="305" alt="" /> </li>
+                                }
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="clear"></div>
+            </div>
+            <div class="clear"></div>
+        </div>
+    </div>
+    <div class"content">
+        <div class="wrap">
+            <div class="wrapper">
+                <div class="con-top">
+                    <h3>Welcome to our Travel Blog!</h3>
+                    <p>
+                        There is the guide for Istanbul which is the best city at the world.
+                        Foods, entertainment, History & Nature. Have you never been in Istanbul?. You should
+                        make trip plan immediately
+                    </p>
+                </div>
+                @Html.Action("Partial1", "AnaSayfa")
+                <div class="grids">
+                    <div class="box1">
+                        @Html.Action("Partial3", "AnaSayfa")
+                        <div class="padding1">
+                            <h4>Our Best Places</h4>
+                            <div class="box-left">
+                                <div class="bot-img">
+                                    <img src="https://www.cumhuriyet.com.tr/Archive/2021/7/4/1849727/kapak_174441.jpg" alt="" />
+                                </div>
+                                <div class="bot-desc">
+                                    <p> Galata Kulesi ya da müze olarak kullanılmaya başlaması sonrasındaki adıyla Galata </p>
+                                </div>
+                                <div class="clear"></div>
+                                <div class="bot-img">
+                                    <img src="https://www.tatildekirala.com/blog/wp-content/uploads/2021/06/kiz-kulesi-hikayesi.jpg" alt="" />
+                                </div>
+                                <div class="bot-desc">
+                                    <p>Kız Kulesi, hakkında çeşitli rivayetler anlatılan, efsanelere konu olan, İstanbul Boğazı'nın Marmara Denizi'ne </p>
+                                </div>
+                                <div class="clear"></div>
+                                <div class="bot-img">
+                                    <img src="https://cdn1.neredekal.com/resimler/haber/image/eyup-sultan-mosque-turkey-picture-id619663482jpg.jpeg" alt="" />
+                                </div>
+                                <div class="bot-desc">
+                                    <p>Eyüp Sultan Camii, dikdörtgen planda, mihrabı çıkıntılıdır. Merkez kubbe altı sütun ve iki filayağına </p>
+                                </div>
+                                <div class="clear"></div>
+                            </div>
+                            <div class="box1-left">
+                                <div class="bot-img">
+                                    <img src="https://www.tatildekirala.com/blog/wp-content/uploads/2021/06/kiz-kulesi-hikayesi.jpg" alt="" />
+                                </div>
+                                <div class="bot-desc1">
+                                    <p>Kız Kulesi, hakkında çeşitli rivayetler anlatılan, efsanelere konu olan, İstanbul Boğazı'nın Marmara Denizi'ne </p>
+                                </div>
+                                <div class="clear"></div>
+                                <div class="bot-img">
+                                    <img src="https://cdn1.neredekal.com/resimler/haber/image/eyup-sultan-mosque-turkey-picture-id619663482jpg.jpeg" alt="" />
+                                </div>
+                                <div class="bot-desc1">
+                                    <p>Eyüp Sultan Camii, dikdörtgen planda, mihrabı çıkıntılıdır. Merkez kubbe altı</p>
+                                </div>
+                                <div class="clear"></div>
+                                <div class="bot-img">
+                                    <img src="~/web/images/pic3.jpg" alt="" />
+                                </div>
+                                <div class="bot-desc1">
+                                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet </p>
+                                </div>
+                                <div class="clear"></div>
+                            </div>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
+
+
+
+

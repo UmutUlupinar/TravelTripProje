@@ -1,0 +1,24 @@
+﻿@using TravelTripProje.Models.Classes
+@model List<Blog>
+<div class="con-bot">
+
+    @foreach (var x in Model)
+    {
+    <div class="left">
+        <div class="bot-left">
+            <img src="@x.BlogImage" height="150" width="300" alt="" />
+        </div>
+        <div class="left-text">
+            <h4>@x.Baslik</h4>
+            <h7>@x.Tarih.ToString("MMMM yyyy")</h7>
+            <p>@x.Aciklama.Substring(0,80)</p>
+            <p><a href="/Blog/BlogDetay/@x.ID"><span class="read">Read More>></span></a></p>
+        </div>
+    </div>
+    }
+
+    @Html.Action("Partial2","AnaSayfa")
+
+   
+    <div class="clear"></div>
+</div>

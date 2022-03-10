@@ -1,0 +1,14 @@
+﻿@using TravelTripProje.Models.Classes
+@model List<Blog>
+
+<div class="padding">
+    <h4>this week's top blogs</h4>
+    <ul class="list list-pad">
+        @{int sayac = 0;}
+            @foreach (var x in Model)
+            {
+            <li class="list-bg"><span>@{sayac++;} @sayac</span><a href="/Blog/BlogDetay/@x.ID">@x.Baslik</a></li>           
+        }
+    </ul>
+    <a href="#" class="link1">see all hotels</a>
+</div>
